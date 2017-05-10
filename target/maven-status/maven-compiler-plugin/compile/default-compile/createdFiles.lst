@@ -1,0 +1,9 @@
+com/ruwen/data/DefaultString.class
+com/ruwen/service/FooService.class
+com/ruwen/service/ServiceUnderTest.class
+com/ruwen/service/ExpensiveService.class
+com/ruwen/data/enums/ModeOfTransport.class
+com/ruwen/data/AppendedStrings.class
+com/ruwen/data/Booking.class
+com/ruwen/data/Booking$BookingBuilder.class
+com/ruwen/service/OptionalService.class
