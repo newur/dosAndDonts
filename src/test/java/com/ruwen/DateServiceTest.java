@@ -33,27 +33,6 @@ public class DateServiceTest {
     private Booking booking;
 
     @Test
-    public void mockPOJOs() {
-        // Two lines to mock a getter...
-        booking = mock(Booking.class);
-        when(this.booking.getTrackingNumber()).thenReturn(TRACKING_NUMBER);
-
-        LocalDate etaPlus2Day = new DateService().findEtaPlus2Day(this.booking);
-
-        assertThat(etaPlus2Day.toString()).contains("2017");
-    }
-
-    @Test
-    public void mockPOJOs_alternative() {
-        // Use a builder if available and consider moving it to a field level
-        booking = Booking.builder().trackingNumber("1234").build();
-
-        LocalDate etaPlus2Day = new DateService().findEtaPlus2Day(this.booking);
-
-        assertThat(etaPlus2Day.toString()).contains("2017");
-    }
-
-    @Test
     public void checkSomethingIsNotPresentInStream() {
         String[] names = {"Torben", "Anthony", "Sven", "Uli"};
 
@@ -90,17 +69,6 @@ public class DateServiceTest {
                 .collect(toList());
 
         beers.stream().forEach(System.out::println);
-    }
-
-    @Test
-    public void mockShouldReturnForOneSpecificAndOneArbitraryInput() {
-        try {
-            // this will not work. Throws InvalidUseOfMatchersException
-            when(fooService.findStringBy2Parameters(any(), "hello")).thenReturn("bang");
-        } catch (InvalidUseOfMatchersException e) {
-            // stack trace explains how to do it. Find an example below
-            e.printStackTrace();
-        }
     }
 
     @Test
