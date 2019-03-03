@@ -11,7 +11,7 @@
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <revision>1.1</revision>
+        <revision>1.2</revision>
         <changelist>-SNAPSHOT</changelist>
     </properties>
 
@@ -41,15 +41,8 @@
                 <version>1.11.1</version>
                 <configuration>
                     <tag>${project.version}</tag>
-                    <message>[Add Version to git]</message>
+                    <message>[maven-scm-plugin] commit from version ${project.version}</message>
                 </configuration>
-                <executions>
-                    <execution>
-                        <configuration>
-                            <message>[Add Version to git]</message>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>
